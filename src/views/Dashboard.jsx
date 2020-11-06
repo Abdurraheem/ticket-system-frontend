@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
+import {BsPeopleFill} from "react-icons/bs";
+import {FaBus} from "react-icons/fa";
+import {FcPlanner} from "react-icons/fc";
+import {FcAutomotive} from "react-icons/fc";
+import {MdAirlineSeatReclineNormal} from "react-icons/md";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -48,44 +53,44 @@ class Dashboard extends Component {
             {this.isActionAllowed("capacity") && (
               <Col lg={3} sm={6}>
                 <StatsCard
-                  bigIcon={<i className="pe-7s-server text-warning" />}
-                  statsText="Capacity"
-                  statsValue="105GB"
-                  statsIcon={<i className="fa fa-refresh" />}
-                  statsIconText="Updated now"
+                  bigIcon={<BsPeopleFill/>}
+                  statsText="Customers"
+                  statsValue="4"
+                  //statsIcon={<i className="fa fa-refresh" />}
+                  //statsIconText="Updated now"
                 />
               </Col>
             )}
              {this.isActionAllowed("revenue") && 
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o" />}
-                statsIconText="Last day"
+                bigIcon={<FcAutomotive/>}
+                statsText="Busses"
+                statsValue="2"
+                // statsIcon={<i className="fa fa-calendar-o" />}
+                // statsIconText="Last day"
               />
             </Col>
              }
              {this.isActionAllowed("errors") && 
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-graph1 text-danger" />}
-                statsText="Errors"
-                statsValue="23"
-                statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="In the last hour"
+                bigIcon={<FcPlanner/>}
+                statsText="Bookings"
+                statsValue="2"
+                // statsIcon={<i className="fa fa-clock-o" />}
+                // statsIconText="In the last hour"
               />
             </Col>
              }
              {this.isActionAllowed("followers") && 
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<i className="fa fa-twitter text-info" />}
-                statsText="Followers"
+                bigIcon={<MdAirlineSeatReclineNormal/>}
+                statsText="Seats"
                 statsValue="+45"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
+                // statsIcon={<i className="fa fa-refresh" />}
+                // statsIconText="Updated now"
               />
             </Col>
              }

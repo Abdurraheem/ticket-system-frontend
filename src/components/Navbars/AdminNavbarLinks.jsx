@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
 
 class AdminNavbarLinks extends Component {
+
+  handleClick = () => {
+    alert("hiii");
+    
+  }
   render() {
     const notification = (
       <div>
@@ -19,7 +24,7 @@ class AdminNavbarLinks extends Component {
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={3} href="#">
+          <NavItem eventKey={3} href="#" onClick={this.handleClick}>
             Log out
           </NavItem>
         </Nav>
