@@ -4,6 +4,7 @@ import {
     REGISTER_USER,
     AUTH_USER,
     LOGOUT_USER,
+    GET_USERS
 } from './types';
 import { USER_SERVER } from '../Config';
 
@@ -47,3 +48,13 @@ export function logoutUser(){
     }
 }
 
+
+export function getUsers(){
+    const request = axios.get(`${USER_SERVER}/getUsers`)
+        .then(response => response.data);
+    console.log("get users request is",request);
+    return {
+        type: GET_USERS,
+        payload: request
+    }
+}

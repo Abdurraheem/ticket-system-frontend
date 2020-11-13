@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+   
+    grid-gap:50px;
+}

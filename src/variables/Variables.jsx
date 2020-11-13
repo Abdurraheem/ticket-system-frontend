@@ -245,13 +245,43 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Name", "Edit", "Delete"];
+const thArray = ["Module", "Visible"];
 const tdArray = [
-  ["1", "Data Entry Person", "Edit", "Delete"],
-  ["2", "Data Specialist",  "Edit", "Delete"],
-  ["3", "Study Director",  "Edit", "Delete"],
-  ["4", "Data Manager",  "Edit", "Delete"],
-  ["5", "Monitor",  "Edit", "Delete"]
+  {
+    id:1,
+    name:"Dashboard"
+  },
+  {
+    id:2,
+    name:"User Management"
+  },
+  {
+    id:3,
+    name:"Bus Management"
+  },
+  {
+    id:4,
+    name:"Booking Details"
+  },
+  {
+    id:5,
+    name:"Cancellation"
+  },
+  {
+    id:5,
+    name:"Booking"
+  },
+  {
+    id:6,
+    name:"Help Details"
+  },
+  {
+    id:7,
+    name:"Route Details"
+  }
+ 
+
+
 ];
 
 //

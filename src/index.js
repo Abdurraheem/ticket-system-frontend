@@ -25,13 +25,17 @@ import "./assets/css/pe-icon-7-stroke.css";
 import AdminLayout from "layouts/Admin.jsx";
 import LoginPage from "./views/LoginPage/LoginPage";
 import RegisterPage from "./views/RegisterPage/RegisterPage";
-
+import TableList from "views/TableList";
+import Forms from "./views/ManageUsers/Forms"
+import {history} from "./history"
+import CreateUser from "./views/ManageUsers/CreateUser";
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
 
 ReactDOM.render(
-  <BrowserRouter>
+
+  <BrowserRouter history={history}>
     <Switch>
-      <Route path="/admin/dashboard" render={props => <AdminLayout {...props} />} />
+      
       <Provider
         store={createStoreWithMiddleware(
           Reducer,
@@ -40,14 +44,37 @@ ReactDOM.render(
       )}
       >
         
-        <Route  exact path="/" component={LoginPage}/>
-        <Route exact path="/register" component={RegisterPage}/>
-        
+        <Route exact path="/" component={LoginPage}/>
+        <Route exact path="/register" component={RegisterPage}/> 
+        <Route exact path="/login" component={LoginPage}/> 
+        <Route path="/admin" render={props => <AdminLayout {...props} />} />
+      
       </Provider>
-      <Redirect from="/" to="/login" />
+      <Redirect from="/admin" to="/admin/dashboard" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
 );
 
 serviceWorker.unregister();
+
+
+
+  // <BrowserRouter>
+  //   <Switch>
+  //     <Route path="/admin/dashboard" render={props => <AdminLayout {...props} />} />
+  //     <Provider
+  //       store={createStoreWithMiddleware(
+  //         Reducer,
+  //         window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  //         window.__REDUX_DEVTOOLS_EXTENSION__()
+  //     )}
+  //     >
+        
+  //       <Route  exact path="/" component={LoginPage}/>
+  //       <Route exact path="/register" component={RegisterPage}/>
+        
+  //     </Provider>
+  //     <Redirect from="/" to="/login" />
+  //   </Switch>
+  // </BrowserRouter>,

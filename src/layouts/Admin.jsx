@@ -5,6 +5,7 @@ import Sidebar from "components/Sidebar/Sidebar";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 import routes from "routes.js";
 import image from "assets/img/sidebar-3.jpg";
+import CreateUser from "../views/ManageUsers/CreateUser";
 
 class Admin extends Component {
   constructor(props) {
@@ -63,6 +64,10 @@ class Admin extends Component {
             )}
             key={key}
           />
+        );
+      } else if(prop.layout === "/admin/create_user") {
+        return (
+          <CreateUser/>
         );
       } else {
         return null;
