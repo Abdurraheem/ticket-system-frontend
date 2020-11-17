@@ -11,8 +11,8 @@ class Admin extends Component {
     super(props);
     this.state = {
       image: image,
-      color: "black",
-      hasImage: true,
+      color: "#636f83",
+      hasImage: false,
       fixedClasses: "dropdown show-dropdown open"
     };
   }

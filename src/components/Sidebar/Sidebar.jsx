@@ -25,7 +25,7 @@ class Sidebar extends Component {
   }
   render() {
     const sidebarBackground = {
-      backgroundColor: "black"
+      backgroundColor: "#636f83"
       // backgroundImage: "url(" + this.props.image + ")"
     };
     return (
@@ -38,7 +38,7 @@ class Sidebar extends Component {
           {this.props.hasImage ? (
             <div className="sidebar-background" style={sidebarBackground} />
           ) : (
-            null
+            <div className="sidebar-background" style={sidebarBackground} />
           )}
         <div className="logo">
           <a
