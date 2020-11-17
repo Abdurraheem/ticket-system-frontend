@@ -79,7 +79,7 @@ function AllowedActions() {
           {
             "path": "/users",
             "name": "User Management",
-            "icon": "pe-7s-note2",
+            "icon": "pe-7s-user",
             "component": ManageUsers,
             "layout": "/admin",
             "actions": [
@@ -122,7 +122,7 @@ function AllowedActions() {
           {
             "path": "/booking_details",
             "name": "Booking Details",
-            "icon": "pe-7s-note2",
+            "icon": "pe-7s-ticket",
             "component": BookingDetails,
             "layout": "/admin",
             "actions": [
@@ -144,7 +144,7 @@ function AllowedActions() {
           {
             "path": "/customers",
             "name": "Customers",
-            "icon": "pe-7s-note2",
+            "icon": "pe-7s-users",
             "component": Customers,
             "layout": "/admin",
             "actions": [
@@ -162,76 +162,12 @@ function AllowedActions() {
               }
             ]
           },
+         
           {
-            "path": "/users",
-            "name": "Cancellation",
-            "icon": "pe-7s-note2",
-            "component": ManageUsers,
-            "layout": "/admin",
-            "actions": [
-              {
-                "actionId": 2,
-                "actionUrl": "create-role",
-                "action": "Create Role",
-                "roleIsActive": true
-              },
-              {
-                "actionId": 2,
-                "actionUrl": "delete-role",
-                "action": "Delete Role",
-                "roleIsActive": true
-              }
-            ]
-          },
-          {
-            "path": "/booking",
-            "name": "Booking",
-            "icon": "pe-7s-note2",
-            "component": Booking,
-            "layout": "/admin",
-            "actions": [
-              {
-                "actionId": 2,
-                "actionUrl": "create-role",
-                "action": "Create Role",
-                "roleIsActive": true
-              },
-              {
-                "actionId": 2,
-                "actionUrl": "delete-role",
-                "action": "Delete Role",
-                "roleIsActive": true
-              }
-            ]
-          },
-          {
-            "path": "/users",
-            "name": "Help Details",
-            "icon": "pe-7s-note2",
-            "component": ManageUsers,
-            "layout": "/admin",
-            "actions": [
-              {
-                "actionId": 2,
-                "actionUrl": "create-role",
-                "action": "Create Role",
-                "roleIsActive": true
-              },
-              {
-                "actionId": 2,
-                "actionUrl": "delete-role",
-                "action": "Delete Role",
-                "roleIsActive": true
-              }
-            ]
-
-          },
-
-          {
-            "path": "/users",
+            "path": "/create_user",
             "name": "Route Details",
-            "icon": "pe-7s-note2",
-            "component": ManageUsers,
+            "icon": "pe-7s-clock",
+            "component": CreateUser,
             "layout": "/admin",
             "actions": [
               {

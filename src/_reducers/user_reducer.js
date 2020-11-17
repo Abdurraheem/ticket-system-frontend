@@ -16,7 +16,8 @@ export default function(state={},action){
         case AUTH_USER:
             return {...state, userData: action.payload }
         case LOGOUT_USER:
-            return {...state }
+            console.log("in reducer")
+            return {...state}
         case GET_USERS:
              return {...state, users: action.payload }
         default:

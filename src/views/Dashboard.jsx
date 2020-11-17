@@ -6,7 +6,7 @@ import {FaBus} from "react-icons/fa";
 import {FcPlanner} from "react-icons/fc";
 import {FcAutomotive} from "react-icons/fc";
 import {MdAirlineSeatReclineNormal} from "react-icons/md";
-
+import {FcCheckmark} from "react-icons/fc"
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +51,7 @@ class Dashboard extends Component {
         <Grid fluid>
           <Row>
             {this.isActionAllowed("capacity") && (
-              <Col lg={3} sm={6}>
+              <Col lg={3} sm={3}>
                 <StatsCard
                   bigIcon={<BsPeopleFill/>}
                   statsText="Customers"
@@ -62,7 +62,7 @@ class Dashboard extends Component {
               </Col>
             )}
              {this.isActionAllowed("revenue") && 
-            <Col lg={3} sm={6}>
+            <Col lg={3} sm={3}>
               <StatsCard
                 bigIcon={<FcAutomotive/>}
                 statsText="Busses"
@@ -73,7 +73,7 @@ class Dashboard extends Component {
             </Col>
              }
              {this.isActionAllowed("errors") && 
-            <Col lg={3} sm={6}>
+            <Col lg={3} sm={3}>
               <StatsCard
                 bigIcon={<FcPlanner/>}
                 statsText="Bookings"
@@ -83,12 +83,28 @@ class Dashboard extends Component {
               />
             </Col>
              }
-             {this.isActionAllowed("followers") && 
-            <Col lg={3} sm={6}>
-              <StatsCard
+
+              {this.isActionAllowed("followers") && 
+              <Col lg={3} sm={3}>
+                <StatsCard
                 bigIcon={<MdAirlineSeatReclineNormal/>}
                 statsText="Seats"
                 statsValue="+45"
+                // statsIcon={<i className="fa fa-refresh" />}
+                // statsIconText="Updated now"
+              />
+            </Col>
+             }
+            
+          </Row>
+
+          <Row>
+          {this.isActionAllowed("followers") && 
+              <Col lg={3} sm={3}>
+                <StatsCard
+                bigIcon={<FcCheckmark/>}
+                statsText="Availability"
+                statsValue="2"
                 // statsIcon={<i className="fa fa-refresh" />}
                 // statsIconText="Updated now"
               />

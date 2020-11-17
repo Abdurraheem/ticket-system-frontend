@@ -97,7 +97,7 @@ const change = (value) => {
                      
                     }}
                   
-                    onSubmit={(values, { setSubmitting }) => {
+                    onSubmit={(values, { setSubmitting ,resetForm}) => {
                       
                     setTimeout(() => {
                       console.log("Permissions",state.permissions)
@@ -121,7 +121,9 @@ const change = (value) => {
                        }
                       })
                       setSubmitting(false);
+                      resetForm();
                       },500);
+                     
                     }}
                     >
                       {({

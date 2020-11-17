@@ -29,6 +29,8 @@ import TableList from "views/TableList";
 import Forms from "./views/ManageUsers/Forms"
 import {history} from "./history"
 import CreateUser from "./views/ManageUsers/CreateUser";
+import Auth from "./hoc/auth";
+import NewLogin from "./views/LoginPage/NewLogin";
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
 
 ReactDOM.render(
@@ -45,9 +47,10 @@ ReactDOM.render(
       >
         
         <Route exact path="/" component={LoginPage}/>
+        <Route exact path="/login" component={NewLogin}/>
         <Route exact path="/register" component={RegisterPage}/> 
-        <Route exact path="/login" component={LoginPage}/> 
-        <Route path="/admin" render={props => <AdminLayout {...props} />} />
+        <Route path="/admin"  component={Auth(AdminLayout)} />
+        {/* <Route path="/admin"  render={props => <AdminLayout {...props} />} /> */}
       
       </Provider>
       <Redirect from="/admin" to="/admin/dashboard" />
