@@ -263,21 +263,14 @@ const tdArray = [
     id:4,
     name:"Booking Details"
   },
-  {
-    id:5,
-    name:"Cancellation"
-  },
-  {
-    id:5,
-    name:"Booking"
-  },
+  
   {
     id:6,
-    name:"Help Details"
+    name:"Customers"
   },
   {
     id:7,
-    name:"Route Details"
+    name:"Create User"
   }
  
 
