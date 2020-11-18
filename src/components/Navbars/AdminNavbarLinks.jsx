@@ -6,7 +6,8 @@ import { logoutUser } from  "../../_actions/user_actions";
 import axios from 'axios';
 import { USER_SERVER } from "../../Config";
 import UserCard from "components/UserCard/UserCard";
-
+import Avatar from '@material-ui/core/Avatar';
+import avatar from "../../assets/img/faces/face-1.jpg"
 function AdminNavbarLinks(){
 
   
@@ -37,10 +38,32 @@ const dispatch = useDispatch();
           </NavItem>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={3} href="#" onClick={handleClick}>
-            Log out
-          </NavItem>
+       
+          <NavDropdown
+            eventKey={2}
+            title={
+              <div className="pull-left">
+                  <img 
+                      src={avatar} 
+                      alt="user pic"
+                      width="36px"
+                      height="36px"
+                      style={{marginBottom:"7px",borderRadius:"20px"}}
+                  />
+              </div>
+            }
+            
+            
+          >
+            <MenuItem eventKey={2.1}>Profile</MenuItem>
+            
+            <MenuItem eventKey={2.5}>Settings</MenuItem>
+            <MenuItem divider />
+            <MenuItem eventKey={2.5} onClick={handleClick}>Log Out</MenuItem>
+          </NavDropdown>
+          
         </Nav>
+      
       </div>
     );
   

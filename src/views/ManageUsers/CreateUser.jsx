@@ -20,7 +20,7 @@ import Forms from "./Forms";
 
 function CreateUser(props) {
 
-
+  console.log("in create user")
   const state ={
     permissions:[],
     role:""

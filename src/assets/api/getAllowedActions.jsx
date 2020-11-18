@@ -165,7 +165,7 @@ function AllowedActions() {
          
           {
             "path": "/create_user",
-            "name": "Route Details",
+            "name": "Create User",
             "icon": "pe-7s-clock",
             "component": CreateUser,
             "layout": "/admin",

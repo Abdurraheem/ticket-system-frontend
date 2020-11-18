@@ -56,6 +56,7 @@ class Dashboard extends Component {
                   bigIcon={<BsPeopleFill/>}
                   statsText="Customers"
                   statsValue="4"
+                  color="#321fdb"
                   //statsIcon={<i className="fa fa-refresh" />}
                   //statsIconText="Updated now"
                 />
@@ -67,6 +68,7 @@ class Dashboard extends Component {
                 bigIcon={<FcAutomotive/>}
                 statsText="Busses"
                 statsValue="2"
+                color="#3399ff"
                 // statsIcon={<i className="fa fa-calendar-o" />}
                 // statsIconText="Last day"
               />
@@ -78,6 +80,7 @@ class Dashboard extends Component {
                 bigIcon={<FcPlanner/>}
                 statsText="Bookings"
                 statsValue="2"
+                color="#f9b115"
                 // statsIcon={<i className="fa fa-clock-o" />}
                 // statsIconText="In the last hour"
               />
@@ -90,6 +93,7 @@ class Dashboard extends Component {
                 bigIcon={<MdAirlineSeatReclineNormal/>}
                 statsText="Seats"
                 statsValue="+45"
+                color="#e55353"
                 // statsIcon={<i className="fa fa-refresh" />}
                 // statsIconText="Updated now"
               />
@@ -105,6 +109,7 @@ class Dashboard extends Component {
                 bigIcon={<FcCheckmark/>}
                 statsText="Availability"
                 statsValue="2"
+                color="	#2eb85c"
                 // statsIcon={<i className="fa fa-refresh" />}
                 // statsIconText="Updated now"
               />

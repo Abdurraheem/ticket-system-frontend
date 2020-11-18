@@ -28,9 +28,7 @@ import RegisterPage from "./views/RegisterPage/RegisterPage";
 import TableList from "views/TableList";
 import Forms from "./views/ManageUsers/Forms"
 import {history} from "./history"
-import CreateUser from "./views/ManageUsers/CreateUser";
 import Auth from "./hoc/auth";
-import NewLogin from "./views/LoginPage/NewLogin";
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
 
 ReactDOM.render(
@@ -47,9 +45,10 @@ ReactDOM.render(
       >
         
         <Route exact path="/" component={LoginPage}/>
-        <Route exact path="/login" component={NewLogin}/>
+        
         <Route exact path="/register" component={RegisterPage}/> 
         <Route path="/admin"  component={Auth(AdminLayout)} />
+        
         {/* <Route path="/admin"  render={props => <AdminLayout {...props} />} /> */}
       
       </Provider>
@@ -60,24 +59,3 @@ ReactDOM.render(
 );
 
 serviceWorker.unregister();
-
-
-
-  // <BrowserRouter>
-  //   <Switch>
-  //     <Route path="/admin/dashboard" render={props => <AdminLayout {...props} />} />
-  //     <Provider
-  //       store={createStoreWithMiddleware(
-  //         Reducer,
-  //         window.__REDUX_DEVTOOLS_EXTENSION__ &&
-  //         window.__REDUX_DEVTOOLS_EXTENSION__()
-  //     )}
-  //     >
-        
-  //       <Route  exact path="/" component={LoginPage}/>
-  //       <Route exact path="/register" component={RegisterPage}/>
-        
-  //     </Provider>
-  //     <Redirect from="/" to="/login" />
-  //   </Switch>
-  // </BrowserRouter>,
