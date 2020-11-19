@@ -10,11 +10,20 @@ class Sidebar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
+      permission : JSON.parse(window.localStorage.getItem('permission'))
     };
   }
   activeRoute(routeName) {
     return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+  }
+  checkPermission(name){
+     name = name.toUpperCase().replace(/ /g,'');
+     var perm = this.state.permission;
+     if(perm.includes(name)){
+      return true;
+     }
+     return false;
   }
   updateDimensions() {
     this.setState({ width: window.innerWidth });
@@ -61,7 +70,7 @@ class Sidebar extends Component {
             {this.state.width <= 991 ? <AdminNavbarLinks /> : null}
             {this.props.routes.map((prop, key) => {
               console.log("Props",prop)
-              if (!prop.redirect)
+              if (!prop.redirect && !this.checkPermission(prop.name))
 
                 return (
                   <>
