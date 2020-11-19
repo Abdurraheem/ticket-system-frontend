@@ -51,6 +51,7 @@ export function loginUser(dataToSubmit){
     const request = axios.post(`${USER_SERVER}/login`,dataToSubmit)
                 .then(response => {
                     window.localStorage.setItem('authToken', response.data.token);
+                    window.localStorage.setItem('permission', JSON.stringify(response.data.permission));
                     return response.data
                 });
 
