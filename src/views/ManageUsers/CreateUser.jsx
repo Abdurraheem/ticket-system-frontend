@@ -29,13 +29,13 @@ function CreateUser(props) {
   
 const onchange = (e,id,name) => {
   const target = e.target;
-  var value = target.value;
-  
+  var value = target.value.toUpperCase().replace(/ /g,'');
   if(target.checked){
-      state.permissions[value] = value;   
+      state.permissions.push(value);   
   }else{
       state.permissions.splice(value, 1);
   }
+
 }
 
 
